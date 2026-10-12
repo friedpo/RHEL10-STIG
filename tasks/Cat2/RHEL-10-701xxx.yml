@@ -520,7 +520,7 @@
     section: 'sssd'
     value: true
     create: true
-    mode: 'u-x,go-wx'
+    mode: 'u-x,g-wx,o-rwx'
     owner: root
     group: root
   notify: Restart sssd
@@ -737,7 +737,7 @@
     option: offline_credentials_expiration
     section: pam
     value: '1'
-    mode: 'u-x,go-wx'
+    mode: 'u-x,g-wx,o-rwx'
     owner: root
     group: root
     create: true
