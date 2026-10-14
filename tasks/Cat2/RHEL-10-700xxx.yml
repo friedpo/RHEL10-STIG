@@ -1784,7 +1784,7 @@
       when: "item.path != rhel10stig_sshd_config_file"
       ansible.builtin.replace:
         path: "{{ item.path }}"
-        regexp: (?i)^ClientAliveInterval\s*([1-9]|[1-5][0-9]{1,2}|600)
+        regexp: (?i)^ClientAliveInterval\s*([1-9]|[1-5][0-9]{1,2}|345600)
         replace: '#ClientAliveInterval \1'
       failed_when: discovered_clientaliveinterval_exists.rc not in [0, 257]
       register: discovered_clientaliveinterval_exists
